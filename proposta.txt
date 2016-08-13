@@ -1,0 +1,12 @@
+Agenda: Um	bom engenheiro tem	uma agenda	minimamente organizada,	e	
+como ele acaba sempre trabalhando em equipe acaba precisando
+compartilhar seus compromissos.	Nessa	agenda	compartilhada,	os usuários
+devem conseguir marcar compromissos e	definir alarmes que	seriam
+disparados conforme o	horário do	compromisso chegasse.	Os avisos devem
+ser por e-mail	e	outra forma	qualquer que	de	fato seja instantânea (telefone,	
+aplicativos de	redes sociais,	etc.).	Cada compromisso pode ter diversas
+pessoas associadas,	e	todas deverão receber os avisos.	Caso um	endereço
+seja definido no	compromisso,	um	mapa com	a	localização do	evento deverá
+ser apresentado para	o	usuário.	Como	benchmarking	podem usar o	Google	
+Calendar	e	o	Sunrise.	No	futuro,	 seria muito bacana essa agenda	conseguir
+auxiliar seus usuários a	marcar reuniões e	achar slots	disponíveis.
