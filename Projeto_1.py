@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///databaseagenda.db'
@@ -49,19 +50,7 @@ def add_user():
     	db.session.add(user)
     	db.session.commit()
     	return " dado inserido"
-   return '''
-    	<form action="" method="post">
-        	<p style = "color:red">Evento: <input type=text name=Evento>
-        	<p>Data: <input type=text name=Data>
-        	<p>Horário do Início: <input type=text name=Horario_do_Inicio>
-        	<p>Horário do Término: <input type=text name=Horario_do_Termino>
-        	<p>Endereço: <input type=text name=Endereco>
-        	<p>Descrição: <input type=text name=Descricao>
-        	<p>Pessoas associadas: <input type=text name=Pessoas_associadas>
-        	<p>Alarme: <input type=text name=Alarme>
-        	<p><input type=submit value=Criar>
-    	</form>
-	'''
+   return redirect("/static/evento.html")
 
 
 db.create_all()
