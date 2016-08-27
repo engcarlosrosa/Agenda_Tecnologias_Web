@@ -1,42 +1,54 @@
+function mes() {
 
+	var p  = document.createElement('p');
+	p.className = 'mes';
+	p.appendChild(document.createTextNode('Janeiro'));
+	document.getElementById('mes').appendChild(p);
+
+}
+
+
+function dias_semana() {
+
+	var ul = document.createElement('ul');
+	semana = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado']
+	
+
+	for(var j=0;j<7;j++){
+		 var dia_semana = document.createElement('p');
+		 dia_semana.className = "dia_semana";
+		 dia_semana.appendChild(document.createTextNode(semana[j]));
+		 document.getElementById('titulos_semana').appendChild(dia_semana);
+		 ul.appendChild(dia_semana);
+
+	}
+
+	document.getElementById('titulos_semana').appendChild(ul);
+
+}
 
 
 function desenho() {
 
 	var ul = document.createElement('ul');
-	var p  = document.createElement('p'); 
-	dias_semana = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado']
-	meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
-	var counter_semana = 0;
-	var counter_mes = 30;
-
-
-
+	var counter_semana = 1;
+	
+	
 	for(var i=0;i<30;i++){
+
 		 var li = document.createElement('li');
-		 li.className = 'semana'; 
-		 li.appendChild(document.createTextNode(dias_semana[i - counter_semana]));
+		 li.className = 'dias'; 
+		 li.appendChild(document.createTextNode(i+counter_semana));
 		 var a = document.createElement('a');
 		 a.appendChild(li);
-		 a.setAttribute("href", "/" + "?Dia=" + (1 + i))
+		 a.setAttribute("href", "/" + "?Dia=" + (1 + i));
 		 ul.appendChild(a);
 		 li.setAttribute("id", "Dia" + (1 + i));
 		 
-		 
-		 
-		 if(dias_semana[i - counter_semana] == 'Sábado'){
-		  counter_semana+=7;
-
-
-		 }
+		 counter_semana = 1;
 
 	}
 
-	p.className = 'mes';
-	p.appendChild(document.createTextNode('Janeiro'));
-	document.getElementById('calendario').appendChild(p);
-	document.getElementById('calendario').appendChild(ul);
-
+    document.getElementById('calendario').appendChild(ul);
+    
 }
-  
-

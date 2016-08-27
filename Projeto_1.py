@@ -50,7 +50,7 @@ def add_user():
     	db.session.add(user)
     	db.session.commit()
     	return " dado inserido"
-   return redirect("/static/evento.html")
+   return render_template("evento.html")
 
 
 db.create_all()
