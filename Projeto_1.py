@@ -52,7 +52,11 @@ def add_user():
     	return " dado inserido"
    return render_template("evento.html")
 
-
+@app.route('/list')
+def list_user():
+	users = User.query.all()
+	return render_template('list.html',users=users)
+	
 db.create_all()
 
 if __name__ == "__main__":

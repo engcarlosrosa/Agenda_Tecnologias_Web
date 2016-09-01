@@ -54,7 +54,27 @@
 			
 			<div id="banner">
 				
-				<h1>Agenda<small>Agenda de compromissos</small></h1>
+				<style>
+                table, th, td {
+                    border: 1px solid black;
+                }
+                </style>
+                <table>
+                <tbody>
+                {% for row in users %}
+                    <tr>
+                    <td>{{ row.Evento }}</td>
+                    <td>{{ row.Data }}</td>
+                    <td>{{ row.Horario_do_Inicio }}</td>
+                    <td>{{ row.Horario_do_Termino }}</td>
+                    <td>{{ row.Endereco }}</td>
+                    <td>{{ row.Descricao }}</td>
+                    <td>{{ row.Pessoas_associadas }}</td>
+                    <td>{{ row.Alarme }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                </table>
 
 			</div>
 

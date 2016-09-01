@@ -4,10 +4,10 @@
 
 		<meta charset="utf-8">
 		<title>Agenda</title>
-		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="../static/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/lib/owl.carousel/owl-carousel/owl.carousel.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/orlando.css">
+		<link rel="stylesheet" href="../static/css/orlando.css">
 
 	</head>
 	<body>
@@ -28,8 +28,8 @@
 					
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Projeto_1.html">Agenda</a></li>
+							<li><a href="../static/index.html">Home</a></li>
+							<li><a href="../static/Projeto_1.html">Agenda</a></li>
 							<li><a href="../list">Compromissos</a></li>
 							<li><a href="#">Mapa</a></li>
 							<li><a href="#">Lembretes</a></li>
@@ -52,80 +52,34 @@
 
 		<section>
 			
-			<div id="banner">
+			<div >
 				
-				<h1>Agenda<small>Agenda de compromissos</small></h1>
+				<style>
+                table, th, td {
+					margin: 20px;
+					border: 1px black solid;
+					padding: 10px;
+					min-height: 60px;
+                }
+                </style>
+                <table>
+                <tbody>
+                {% for row in users %}
+                    <tr>
+                    <td>{{ row.Evento }} Evento</td>
+                    <td>{{ row.Data }} Data</td>
+                    <td>{{ row.Horario_do_Inicio }} Horario do Inicio</td>
+                    <td>{{ row.Horario_do_Termino }} Horario do Termino</td>
+                    <td>{{ row.Endereco }} Endereco</td>
+                    <td>{{ row.Descricao }} Descricao</td>
+                    <td>{{ row.Pessoas_associadas }} Pessoas associadas</td>
+                    <td>{{ row.Alarme }} Alarme </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                </table>
 
 			</div>
-
-			<div id="news" class="container">
-				
-				<div class="row text-center">
-					<h2>Próximos compromissos</h2>
-					<hr>	
-				</div>				
-
-				<div class="row thumbnails">
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/IBM.jpg" alt="Noticia">
-							<h3>Palestra IBM</h3>
-							<time>Próxima Quinta-feira, 18 ago de 2016</time>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/JPL.jpg" alt="Noticia">
-							<h3> Encontro com Jorge Paulo Lemann</h3>
-							<time>Segunda, 22 ago de 2016 </time>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/MARK.jpg" alt="Noticia">
-							<h3>Palestra Mark Zuckerberg</h3>
-							<time>Terça, 23 ago de 2016</time>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/BRASIL.jpg" alt="Noticia">
-							<h3>Jogo do Brasil</h3>
-							<time>Quarta, 24 ago de 2016</time>
-						</div>
-
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/Po.jpg" alt="Noticia">
-							<h3>Pegar Pokemón</h3>
-							<time>Quinta, 25 ago de 2016</time>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/GOOGLE.jpg" alt="Noticia">
-							<h3>Apresentação Google</h3>
-							<time>Sexta, 24 ago de 2016</time>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/CAMBURI.jpg" alt="Noticia">
-							<h3>Viagem Camburi</h3>
-							<time>Quinta, 29 ago de 2016</time>
-						</div>
-					</div>
-					<div class="item">
-						<div class="item-inner">
-							<img src="img/HARRY.jpg" alt="Noticia">
-							<h3>Ver Harry Potter</h3>
-							<time>Terça, 01 de set de 2016</time>
-						</div>
-					</div>
-				</div>
-
 			</div>
 
 			<div id="estatisticas">
@@ -239,10 +193,10 @@
 
 		</footer>
 
-		<script src="lib/jquery/jquery.min.js"></script>
-		<script src="lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
-		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-		<script src="js/efeitos.js"></script>
+		<script src="../static/lib/jquery/jquery.min.js"></script>
+		<script src="../static/lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
+		<script src="../static/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/js/efeitos.js"></script>
 
 	</body>
 </html>
