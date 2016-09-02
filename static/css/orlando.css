@@ -17,26 +17,20 @@ header .container {
 }
 header .header-black {
 	background-color: #000;
-	height: -10px; /*altura*/
+	height: 40px; /*altura*/
 }
-
-header #log {
-	margin: 12px 0;
-	left: 0%;
-
 }
-header #log li {
-	display: inline-block;
-	font-family: "OpenSans"; /* Fonte achada no google/fonts. Fiz o download do arquivo opensans e salvei em uma pasta do projeto*/
-
+header #logotipo {
+	position: absolute;
+	top: 20px;
+	z-index: 
 }
-
 #menu {
 	margin: 12px 0;
 }
 #menu li {
 	display: inline-block;
-	font-family: "OpenSans-Regular"; /* Fonte achada no google/fonts. Fiz o download do arquivo opensans e salvei em uma pasta do projeto*/
+	font-family: "OpenSans"; /* Fonte achada no google/fonts. Fiz o download do arquivo opensans e salvei em uma pasta do projeto*/
 }
 #menu li.search {
 	width: 182px;
@@ -49,11 +43,24 @@ header #log li {
 	line-height: 30px;
 	padding-left: 8px;
 }
+#menu li.search ::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
 
-
+}
+#menu li.search button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: 3px;
+    top: 7px;
+}
+#menu li.search button i {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.5);
+}
 #menu li a {
 	color: #FFF;
-	font-size: 19px;
+	font-size: 16px;
 	padding: 10px 65px;
 	font-weight: bold;
 
