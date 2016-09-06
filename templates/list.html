@@ -60,20 +60,33 @@
 					border: 1px black solid;
 					padding: 10px;
 					min-height: 60px;
+					margin-left: 320px;
+
                 }
                 </style>
-                <table>
+                <table >
                 <tbody>
+                <thead>
+                	<td>Evento</td>
+                	<td>Data</td>
+                	<td>Horário de Início</td>
+                	<td>Horário do Término</td>
+                	<td>Endereco</td>
+                	<td>Descricao</td>
+                	<td>Pessoas Associadas</td>
+                	<td>Alarme</td>
+
+                </thead>
                 {% for row in users %}
                     <tr>
-                    <td>{{ row.Evento }} Evento</td>
-                    <td>{{ row.Data }} Data</td>
-                    <td>{{ row.Horario_do_Inicio }} Horario do Inicio</td>
-                    <td>{{ row.Horario_do_Termino }} Horario do Termino</td>
-                    <td>{{ row.Endereco }} Endereco</td>
-                    <td>{{ row.Descricao }} Descricao</td>
-                    <td>{{ row.Pessoas_associadas }} Pessoas associadas</td>
-                    <td>{{ row.Alarme }} Alarme </td>
+                    <td>{{ row.Evento }} </td>
+                    <td>{{ row.Data }} </td>
+                    <td>{{ row.Horario_do_Inicio }} </td>
+                    <td>{{ row.Horario_do_Termino }} </td>
+                    <td>{{ row.Endereco }} </td>
+                    <td>{{ row.Descricao }} </td>
+                    <td>{{ row.Pessoas_associadas }} </td>
+                    <td>{{ row.Alarme }}  </td>
                     </tr>
                 {% endfor %}
                 </tbody>

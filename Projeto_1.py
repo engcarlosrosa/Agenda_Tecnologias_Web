@@ -49,8 +49,11 @@ def add_user():
     	user = User(Evento=Evento, Data=Data, Horario_do_Inicio=Horario_do_Inicio, Horario_do_Termino=Horario_do_Termino, Endereco=Endereco, Descricao=Descricao, Pessoas_associadas=Pessoas_associadas, Alarme=Alarme)
     	db.session.add(user)
     	db.session.commit()
-    	return " dado inserido"
+    	return  "dado inserido"
+
+
    return render_template("evento.html")
+
 
 @app.route('/list')
 def list_user():
