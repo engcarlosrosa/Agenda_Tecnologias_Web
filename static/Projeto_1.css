@@ -4,7 +4,6 @@
 	background-color: black;
 	margin-left: 19px;
 	list-style: none;
-	float: left;
 	margin-top: 20px;
 	margin-bottom: 5px;
 	border-radius: 10px;
@@ -12,9 +11,10 @@
 	font-size: 40px;
 	text-align: center;
 	font-size: auto;
-	padding:  65px;
+	padding: 10px;	
+	float: left;
+    padding: 10px;
 
-	position: relative;
 	
 }
 
@@ -34,6 +34,7 @@
 	font-size: 40px;
 	text-align: center;
 	width: 1000px;
+	margin-right: 10px;
 }
 
 #mes{
@@ -55,7 +56,7 @@
 }
 
 #tela{
-	width: 1000px;
+	width: 1200px;
 	height: 1000px;
 	
 }
@@ -64,4 +65,5 @@
 #body{
 
 	background-color: white;
+	
 }
